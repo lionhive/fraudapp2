@@ -1,5 +1,5 @@
 import { JetView } from "webix-jet";
-import { claimant } from "../models/claimant";
+import { claimant, insured } from "../models/claimant";
 
 export default class ClaimantView extends JetView {
 	config() {
@@ -17,6 +17,14 @@ export default class ClaimantView extends JetView {
 						{ id: "year", header: "" },
 					],
 					data: claimant,
+				},
+				{
+					view: "datatable",
+					columns: [
+						{ id: "title", header: "Insured", fillspace: true },
+						{ id: "year", header: "" },
+					],
+					data: insured,
 				},
 			]
 		};

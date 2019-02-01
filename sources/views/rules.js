@@ -35,6 +35,21 @@ export default class RulesView extends JetView {
 					tooltip:_("Double-click to edit the task name"),
 					template: obj => _(obj.task)
 				},
+				// {
+				// 	id:"weight", fillspace:3, header:_("Risk"),
+				// 	sort:"text", editor:"text",
+				// 	tooltip:_("Double-click to edit the task name"),
+				// 	template: obj => _(obj.weight)
+				// },
+				{
+					id: "weight", header: "Impact", sort: "int", // fillspace: 2.5,
+					template: function (obj) {
+						var html = "<div class='progress_bar_element'>";
+						html += "<div title='" + (parseInt(obj.weight * 100, 10) + "%") + "' class='progress_result ' style='width:" + (obj.weight * 100 + "%") + "'></div>";
+						html += "</div>";
+						return html;
+					}
+				},
 				{
 					id:"start", fillspace:1,
 					format:date_format,

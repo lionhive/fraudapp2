@@ -8,12 +8,13 @@ export default class TimeView extends JetView {
 			type: "clean",
 			width: 410,
 			height: 300,
+			shadow: 1,
 			rows: [
 				// { template:_("Claimant"), type:"header", css:"webix_header chart_header" },
 				{
 					view: "datatable",
 					columns: [
-						{ id: "title", header: "Invesigator", fillspace: true },
+						{ id: "title", header: "Investigator", fillspace: true },
 						{ id: "year", header: "" },
 					],
 					data: time,
@@ -26,7 +27,7 @@ export default class TimeView extends JetView {
 					value: "#hours#",
 					color: "#color#",
 					innerRadius: 64,
-					shadow: 0,
+					shadow: 1,
 					lineColor: obj => obj.color,
 					tooltip: {
 						template: "#hours#"

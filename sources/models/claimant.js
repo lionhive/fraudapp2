@@ -1,6 +1,6 @@
 export const time =
   [
-    { title: "Invesigator Name", year: "Tommie S.", votes: 678790 },
+    { title: "Investigator Name", year: "Tommie S.", votes: 678790 },
     { title: "Experience", year: "3.6 years", votes: 678790 },
     { title: "Case Load", year: "5 active", votes: 678790 },
 
@@ -36,11 +36,11 @@ export const loss =
 
 export const fraud =
 [
-  { title: "Claim Fraud", year: "Extreme" },
-  { title: "Provider Fraud", year: "High" },
-  { title: "Collusion Fraud", year: "Detected" },
-  { title: "Related Claims", year: "37" },
-  { title: "Graph Analysis ", year: "Flagged" },
+  { title: "Claim Fraud", year: "Extreme", value: [9.8], history:[0,80,15,50,210,250] },
+  { title: "Provider Fraud", year: "High", value: [8.7], history:[250,240,300,230,270,280]},
+  { title: "Collusion Fraud", year: "Detected", value: 5.0, history: [250,240,300,230,270,280] },
+  { title: "Related Claims", year: "37", value: 2.0, history: [150,200,170,210,250,190]},
+  { title: "Graph Analysis ", year: "Flagged", value: 9.0, history: [280,230,280,290,260,210] },
 ];
 
 

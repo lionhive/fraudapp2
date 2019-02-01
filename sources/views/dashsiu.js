@@ -18,7 +18,7 @@ export default class DashboardView extends JetView{
 		return {
 			type:"space", paddingX:0,
 			cols:[
-				// PersonsView,
+				PersonsView,
 				{
 					view:"scrollview",
 					borderless:true,
@@ -34,7 +34,7 @@ export default class DashboardView extends JetView{
 										// This causes early wrapping
 										// responsive:"time-and-progress-layout",
 										cols:[
-											ClaimantView, FraudView, InsuredView// ProgressView
+											TimeView, FraudView// ProgressView
 										]
 									}
 								]
@@ -47,7 +47,7 @@ export default class DashboardView extends JetView{
 										type:"wide",
 										responsive:"time-and-progress-layout",
 										cols:[
-											LossView, RulesView //, ProgressView
+											ProgressView
 										]
 									}
 								]

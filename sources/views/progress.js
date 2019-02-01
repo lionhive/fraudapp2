@@ -4,9 +4,9 @@ export default class ProgressView extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
 		return {
-			type:"clean", //gravity:2,
-			// minWidth:500,
-			// height:300,
+			type:"clean", gravity:2,
+			minWidth:500,
+			height:300,
 			rows:[
 				{ template:_("Individual employee's progress"), type:"header", css:"webix_header chart_header" },
 				{

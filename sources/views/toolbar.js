@@ -11,7 +11,7 @@ export default class ToolbarView extends JetView{
 		return {
 			view:"toolbar",
 			css:theme,
-			height:56,
+			height:45,
 			elements:[
 				{ css:"logo", width:53, batch:"default" },
 				{
@@ -32,7 +32,7 @@ export default class ToolbarView extends JetView{
 									type:"form",
 									label:_("Add a claim"),
 									autowidth:true,
-									inputHeight:40,
+									// inputHeight:40,
 									batch:"default",
 									click:() => this.newtask.showWindow()
 								},
@@ -41,7 +41,16 @@ export default class ToolbarView extends JetView{
 									type:"form",
 									label:_("Assign"),
 									autowidth:true,
-									inputHeight:40,
+									// inputHeight:40,
+									batch:"default",
+									click:() => this.newtask.showWindow()
+								},
+								{
+									view:"button",
+									type:"form",
+									label:_("Escalate"),
+									autowidth:true,
+									// inputHeight:40,
 									batch:"default",
 									click:() => this.newtask.showWindow()
 								},
