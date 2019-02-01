@@ -3,8 +3,8 @@ export function getProjects(){
 }
 
 const projects = [
-	{ id:"Support", value:"Support" },
-	{ id:"Failure Testing", value:"Failure Testing" },
-	{ id:"Quality Management", value:"Quality Management" },
-	{ id:"Data Quality", value:"Data Quality" }
+	{ id:"Support", value:"Claim Processing" },
+	{ id:"Failure Testing", value:"SIU" },
+	{ id:"Quality Management", value:"Litigation" },
+	{ id:"Data Quality", value:"Quality" }
 ];

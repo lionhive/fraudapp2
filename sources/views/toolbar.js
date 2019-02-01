@@ -7,7 +7,7 @@ export default class ToolbarView extends JetView{
 	config(){
 		const _ = this.app.getService("locale")._;
 		const theme = this.app.config.theme;
-		
+
 		return {
 			view:"toolbar",
 			css:theme,
@@ -22,15 +22,15 @@ export default class ToolbarView extends JetView{
 							cols:[
 								{
 									view:"label",
-									template:_("Team Progress"),
+									template:_("Deepfraud AI"),
 									width:175,
 									css:"main_label",
 									batch:"default"
 								},
-								{ 
+								{
 									view:"button",
 									type:"form",
-									label:_("Add a task"),
+									label:_("Add a claim"),
 									autowidth:true,
 									inputHeight:40,
 									batch:"default",
@@ -108,7 +108,7 @@ export default class ToolbarView extends JetView{
 					]
 				},
 				{
-					template:`<image class="mainphoto" src="data/photos/dottie.jpg" title="${_("Change your personal settings")}">`,
+					template:`<image class="mainphoto" src="data/photos/tom.png" title="${_("Change your personal settings")}">`,
 					width:60,
 					borderless:true,
 					batch:"default",

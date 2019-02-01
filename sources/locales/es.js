@@ -4,7 +4,7 @@ export default {
 	"Support":"Soporte",
 	"Data Quality":"Calidad de datos",
 	"No new notifications":"No hay nuevas notificaciones",
-	"Team Progress":"Progreso del equipo",
+	"Deepfraud AI":"Progreso del equipo",
 	"Add a task":"Añadir una tarea",
 	"Click to search a task":"Haga clic para buscar una tarea",
 	"Open the list of all tasks":"Abra la lista de todas las tareas",

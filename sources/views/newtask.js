@@ -12,17 +12,17 @@ export default class NewTaskPopup extends JetView {
 			view:"window",
 			position:"center",
 			modal:true,
-			head:_("Add a new task"),
+			head:_("Add a new claim"),
 			body:{
 				view:"form",
 				localId:"form",
 				elementsConfig:{ labelPosition:"top" },
 				rows:[
-					{ view:"text", label:_("Task"), name:"task", width:500 },
+					{ view:"text", label:_("Claim"), name:"task", width:500 },
 					{
 						cols:[
 							{
-								view:"combo", label:_("Project"),
+								view:"combo", label:_("Department"),
 								name:"project", options:projects
 							},
 							{

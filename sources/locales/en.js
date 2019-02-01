@@ -4,7 +4,7 @@ export default {
 	"Support":"Support",
 	"Data Quality":"Data Quality",
 	"No new notifications":"No new notifications",
-	"Team Progress":"Team Progress",
+	"Deepfraud AI":"Deepfraud AI",
 	"Add a task":"Add a task",
 	"Click to search a task":"Click to search a task",
 	"Open the list of all tasks":"Open the list of all tasks",

@@ -4,7 +4,7 @@ export default {
 	"Support":"Поддержка",
 	"Data Quality":"Качество данных",
 	"No new notifications":"Нет новых уведомлений",
-	"Team Progress":"Прогресс команды",
+	"Deepfraud AI":"Прогресс команды",
 	"Add a task":"Добавить задачу",
 	"Click to search a task":"Найти задачу",
 	"Open the list of all tasks":"Открыть список всех задач",

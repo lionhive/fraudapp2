@@ -4,7 +4,7 @@ export default {
 	"Support":"지지물",
 	"Data Quality":"데이터 품질",
 	"No new notifications":"새로운 알림 없음",
-	"Team Progress":"팀 진행 상황",
+	"Deepfraud AI":"팀 진행 상황",
 	"Add a task":"할 일 추가",
 	"Click to search a task":"할 일을 검색하려면 클릭하십시오.",
 	"Open the list of all tasks":"모든 작업 목록 열기",

@@ -1,10 +1,10 @@
 import {JetView} from "webix-jet";
-import {tasks} from "models/tasks";
+import {rules} from "models/rules";
 import {getPersons} from "models/persoptions";
 import {getProjects} from "models/projoptions";
 import {getLangsList} from "models/langslist";
 
-export default class TasksView extends JetView {
+export default class RulesView extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
 		const persons = getPersons();
@@ -90,7 +90,7 @@ export default class TasksView extends JetView {
 		};
 	}
 	init(view,url){
-		view.sync(tasks);
+		view.sync(rules);
 
 		const lang = this.app.getService("locale").getLang();
 		if (lang !== "en"){
@@ -100,7 +100,7 @@ export default class TasksView extends JetView {
 		}
 
 		this.on(this.app,"person:select",person => {
-			let res = tasks.find((obj) => person.id == obj.user);
+			let res = rules.find((obj) => person.id == obj.user);
 			view.unselect();
 			if (res.length){
 				for (let i = 0; i < res.length; i++){
@@ -109,14 +109,6 @@ export default class TasksView extends JetView {
 			}
 		});
 
-		this.on(this.app,"add:task",task => {
-			tasks.add(task);
-			view.showItem(view.getLastId());
-			if (url[0].page === "projects"){
-				const proj = this.getParentView().$$("side:menu").getSelectedId();
-				if (proj) this.app.callEvent("tasks:filter",[proj]);
-			}
-		});
 
 		this.on(this.app,"tasks:filter",id => {
 			if (id === "all")

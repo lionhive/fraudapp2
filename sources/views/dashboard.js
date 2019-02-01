@@ -2,8 +2,9 @@ import {JetView} from "webix-jet";
 import PersonsView from "views/persons";
 import StatisticsView from "views/statistics";
 import TimeView from "views/time";
+import FraudView from "views/fraud";
 import ProgressView from "views/progress";
-import TasksView from "views/tasks";
+import RulesView from "views/rules";
 import CompareView from "views/compare";
 
 export default class DashboardView extends JetView{
@@ -11,14 +12,13 @@ export default class DashboardView extends JetView{
 		return {
 			type:"space", paddingX:0,
 			cols:[
-				PersonsView,
+				// PersonsView,
 				{
 					view:"scrollview",
 					borderless:true,
 					body:{
 						type:"wide",
 						rows:[
-							StatisticsView,
 							{
 								id:"time-and-progress-layout",
 								type:"wide",
@@ -27,7 +27,7 @@ export default class DashboardView extends JetView{
 										type:"wide",
 										responsive:"time-and-progress-layout",
 										cols:[
-											TimeView, ProgressView
+											TimeView, FraudView //, ProgressView
 										]
 									}
 								]
@@ -36,9 +36,10 @@ export default class DashboardView extends JetView{
 								height:300,
 								type:"wide",
 								cols:[
-									TasksView, CompareView
+									RulesView, CompareView
 								]
-							}
+							},
+							StatisticsView,
 						]
 					}
 				},
@@ -47,4 +48,3 @@ export default class DashboardView extends JetView{
 		};
 	}
 }
-				

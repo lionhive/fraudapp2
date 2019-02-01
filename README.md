@@ -1,4 +1,4 @@
-Team Progress Demo App (for the new Webix skin)
+Deepfraud AI Demo App (for the new Webix skin)
 ===================
 
 A demo that allows viewing and controlling the working progress of a team.
