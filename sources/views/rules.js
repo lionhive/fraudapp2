@@ -30,28 +30,10 @@ export default class RulesView extends JetView {
 					}
 				},
 				{
-					id:"task", fillspace:3, header:_("Claim"),
+					id:"task", fillspace:3, header:_("Explanation"),
 					sort:"text", editor:"text",
 					tooltip:_("Double-click to edit the task name"),
 					template: obj => _(obj.task)
-				},
-				{
-					id:"project", header:_("Department"),
-					sort:"text", editor:"combo",
-					css:"tags", width:170,
-					tooltip:_("Double-click to change the project"),
-					options:projects,
-					template: obj => {
-						if (this.getUrl()[0].page === "dashboard")
-							return obj.project;
-						else
-							return `<span class="${obj.project.split(" ").shift().toLowerCase()} tag">&nbsp;${obj.project}&nbsp;</span>`;
-					}
-				},
-				{
-					id:"user", fillspace:1, header:_("Claimant"),
-					options:persons, sort:"text", editor:"combo",
-					tooltip:_("Double-click to assign to a different employee"),
 				},
 				{
 					id:"start", fillspace:1,

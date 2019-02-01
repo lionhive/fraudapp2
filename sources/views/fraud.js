@@ -13,7 +13,7 @@ export default class FraudView extends JetView {
 				{
 					view: "datatable",
 					columns: [
-						{ id: "title", header: "Fraud", fillspace: true },
+						{ id: "title", header: "Fraud Analytics", fillspace: true },
 						{ id: "year", header: "" },
 					],
 					data: fraud,

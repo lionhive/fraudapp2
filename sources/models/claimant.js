@@ -2,10 +2,6 @@ export const claimant =
   [
     { id: 1, title: "Claimant Name", year: "Jon Lewin", votes: 678790 },
     { id: 2, title: "Claim ID", year: 375832, votes: 511495 },
-    { id: 3, title: "Actual Cost", year: "$3,385", votes: 319352 },
-    { id: 4, title: "Expected Cost", year: "$15,382", votes: 533848 },
-    { id: 5, title: "Savings", year: "$-11,880", votes: 533848 },
-    { id: 5, title: "Savings", year: "$-11,880", votes: 533848 },
     { title: "Date of Loss", year: "12/22/2018"},
     { title: "Claim Age", year: "2 months"},
     { title: "Job Title", year: "Truck Driver"},
@@ -15,7 +11,7 @@ export const claimant =
 
   export const insured =
   [
-    { title: "Insured", year: "Best Trucking LLC" },
+    { title: "Insured", year: "USA Trucks" },
     { title: "Employeees", year: "14" },
     { title: "Policy Age (months)", year: "5 " },
   ];

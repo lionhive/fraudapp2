@@ -18,6 +18,7 @@ export default class TimeView extends JetView {
 					],
 					data: claimant,
 				},
+				/*
 				{
 					localId: "hours",
 					view: "chart",
@@ -43,6 +44,7 @@ export default class TimeView extends JetView {
 						top: 10, bottom: 20
 					}
 				}
+				*/
 			]
 		};
 	}
