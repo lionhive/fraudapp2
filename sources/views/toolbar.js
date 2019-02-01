@@ -36,6 +36,15 @@ export default class ToolbarView extends JetView{
 									batch:"default",
 									click:() => this.newtask.showWindow()
 								},
+								{
+									view:"button",
+									type:"form",
+									label:_("Assign"),
+									autowidth:true,
+									inputHeight:40,
+									batch:"default",
+									click:() => this.newtask.showWindow()
+								},
 								{ batch:"default" },
 								{
 									localId:"search",

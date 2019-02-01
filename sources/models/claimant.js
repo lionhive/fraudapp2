@@ -1,3 +1,11 @@
+export const time =
+  [
+    { title: "Invesigator Name", year: "Tommie S.", votes: 678790 },
+    { title: "Experience", year: "3.6 years", votes: 678790 },
+    { title: "Case Load", year: "5 active", votes: 678790 },
+
+  ];
+
 export const claimant =
   [
     { id: 1, title: "Claimant Name", year: "Jon Lewin", votes: 678790 },

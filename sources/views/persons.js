@@ -12,7 +12,7 @@ export default class PersonsView extends JetView {
 					css:theme,
 					localId:"toolbar",
 					elements:[
-						{ view:"label", label:_("Persons") },
+						{ view:"label", label:_("SIU") },
 						{},
 						{
 							view:"icon", icon:"mdi mdi-arrow-down",
@@ -43,7 +43,7 @@ export default class PersonsView extends JetView {
 						template:obj => `<image class="userphoto" src="data/photos/${obj.photo}.jpg" />
 							<div class="text">
 						  		<span class="username">${obj.fname} ${obj.lname}</span>
-						  		<span class="money">$${obj.money}</span>
+						  	  <span class="status">available</span>
 							</div>`,
 						height:66
 					},

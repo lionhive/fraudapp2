@@ -3,6 +3,7 @@ import PersonsView from "views/persons";
 import StatisticsView from "views/statistics";
 import TimeView from "views/time";
 
+import ClaimantView from "views/claimant";
 import EstimatesView from "views/estimates";
 import FraudView from "views/fraud";
 import InsuredView from "views/insured";
@@ -17,7 +18,7 @@ export default class DashboardView extends JetView{
 		return {
 			type:"space", paddingX:0,
 			cols:[
-				// PersonsView,
+				PersonsView,
 				{
 					view:"scrollview",
 					borderless:true,

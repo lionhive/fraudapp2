@@ -1,5 +1,5 @@
 import { JetView } from "webix-jet";
-import { claimant } from "../models/claimant";
+import { time } from "../models/claimant";
 
 export default class TimeView extends JetView {
 	config() {
@@ -13,12 +13,12 @@ export default class TimeView extends JetView {
 				{
 					view: "datatable",
 					columns: [
-						{ id: "title", header: "Claimant", fillspace: true },
+						{ id: "title", header: "Invesigator", fillspace: true },
 						{ id: "year", header: "" },
 					],
-					data: claimant,
+					data: time,
 				},
-				/*
+
 				{
 					localId: "hours",
 					view: "chart",
@@ -44,7 +44,6 @@ export default class TimeView extends JetView {
 						top: 10, bottom: 20
 					}
 				}
-				*/
 			]
 		};
 	}
