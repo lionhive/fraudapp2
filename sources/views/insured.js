@@ -13,7 +13,7 @@ export default class InsuredView extends JetView {
 				{
 					view: "datatable",
 					columns: [
-						{ id: "title", header: "Insured", fillspace: true },
+						{ id: "title", header: "Insured", fillspace: true, css:"title_col" },
 						{ id: "year", header: "" },
 					],
 					data: insured,

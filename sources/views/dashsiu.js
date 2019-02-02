@@ -10,6 +10,7 @@ import InsuredView from "views/insured";
 import LossView from "views/loss";
 
 import ProgressView from "views/progress";
+import ProjectsView from "views/projects";
 import RulesView from "views/rules";
 import CompareView from "views/compare";
 
@@ -34,7 +35,7 @@ export default class DashboardView extends JetView{
 										// This causes early wrapping
 										// responsive:"time-and-progress-layout",
 										cols:[
-											TimeView, FraudView// ProgressView
+											TimeView, CompareView// ProgressView
 										]
 									}
 								]
@@ -56,7 +57,7 @@ export default class DashboardView extends JetView{
 								height:300,
 								type:"wide",
 								cols:[
-									RulesView, CompareView
+									ProjectsView,
 								]
 							},
 						]

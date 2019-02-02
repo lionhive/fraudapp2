@@ -36,7 +36,16 @@ export default class TasksView extends JetView {
 					template: obj => _(obj.task)
 				},
 				{
-					id:"project", header:_("Department"),
+					id: "fraud", header: "Fraud", sort: "int", // fillspace: 2.5,
+					template: function (obj) {
+						var html = "<div class='progress_bar_element'>";
+						html += "<div title='" + (parseInt(obj.fraud * 100, 10) + "%") + "' class='progress_result ' style='width:" + (obj.fraud * 100 + "%") + "'></div>";
+						html += "</div>";
+						return html;
+					}
+				},
+				{
+					id:"project", header:_("Status"),
 					sort:"text", editor:"combo",
 					css:"tags", width:170,
 					tooltip:_("Double-click to change the project"),
@@ -49,15 +58,21 @@ export default class TasksView extends JetView {
 					}
 				},
 				{
-					id:"user", fillspace:1, header:_("Claimant"),
+					id:"user", fillspace:1, header:_("Assigned To"),
 					options:persons, sort:"text", editor:"combo",
 					tooltip:_("Double-click to assign to a different employee"),
 				},
+				// {
+				// 	id:"start", fillspace:1,
+				// 	format:date_format,
+				// 	sort:"date", tooltip:_("The task was created"),
+				// 	header:_("Start")
+				// },
 				{
-					id:"start", fillspace:1,
-					format:date_format,
-					sort:"date", tooltip:_("The task was created"),
-					header:_("Start")
+					id: "history",
+					header: "History",
+					template: "{common.sparklines()}",
+					width: 160
 				},
 				{
 					id:"end", fillspace:1, header:_("Completed"),

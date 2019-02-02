@@ -4,6 +4,7 @@ import StatisticsView from "views/statistics";
 import TimeView from "views/time";
 
 import ClaimantView from "views/claimant";
+import DemographicsView from "views/demographics"
 import EstimatesView from "views/estimates";
 import FraudView from "views/fraud";
 import InsuredView from "views/insured";
@@ -34,7 +35,7 @@ export default class DashboardView extends JetView{
 										// This causes early wrapping
 										// responsive:"time-and-progress-layout",
 										cols:[
-											ClaimantView, FraudView, InsuredView// ProgressView
+											ClaimantView, FraudView, DemographicsView// ProgressView
 										]
 									}
 								]
@@ -50,13 +51,6 @@ export default class DashboardView extends JetView{
 											LossView, RulesView //, ProgressView
 										]
 									}
-								]
-							},
-							{
-								height:300,
-								type:"wide",
-								cols:[
-									RulesView, CompareView
 								]
 							},
 						]

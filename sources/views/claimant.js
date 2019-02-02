@@ -13,7 +13,7 @@ export default class ClaimantView extends JetView {
 				{
 					view: "datatable",
 					columns: [
-						{ id: "title", header: "Claimant", fillspace: true },
+						{ id: "title", header: "Claimant", fillspace: true, css:"title_col" },
 						{ id: "year", header: "" },
 					],
 					data: claimant,
@@ -21,7 +21,7 @@ export default class ClaimantView extends JetView {
 				{
 					view: "datatable",
 					columns: [
-						{ id: "title", header: "Insured", fillspace: true },
+						{ id: "title", header: "Insured", fillspace: true, css:"title_col" },
 						{ id: "year", header: "" },
 					],
 					data: insured,

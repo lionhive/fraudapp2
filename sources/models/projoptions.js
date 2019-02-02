@@ -3,8 +3,9 @@ export function getProjects(){
 }
 
 const projects = [
-	{ id:"Support", value:"Claim Processing" },
-	{ id:"Failure Testing", value:"SIU" },
-	{ id:"Quality Management", value:"Litigation" },
-	{ id:"Data Quality", value:"Quality" }
+	{ id:"Active", value:"Active" },
+	{ id:"Complete", value:"Complete" },
+	{ id:"Cannot Prove", value:"Unable to prove" },
+	{ id:"Cannot Reach", value:"Unable to reach" },
+	{ id:"Needs Info", value:"Need more info" }
 ];

@@ -12,7 +12,7 @@ export default class PersonsView extends JetView {
 					css:theme,
 					localId:"toolbar",
 					elements:[
-						{ view:"label", label:_("SIU") },
+						{ view:"label", label:_("Investigators") },
 						{},
 						{
 							view:"icon", icon:"mdi mdi-arrow-down",

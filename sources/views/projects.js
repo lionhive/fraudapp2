@@ -14,10 +14,10 @@ export default class ProjectsView extends JetView {
 					},
 					data:[
 						{ id:"all", value:"All Claims", icon:"mdi mdi-file-tree" },
-						{ id:"Support", value:"SIU Claims", icon:"mdi mdi-lifebuoy" },
-						{ id:"Failure Testing", value:"Unprocessed Claims", icon:"mdi mdi-monitor-cellphone-star" },
-						{ id:"Quality Management", value:"Litigation", icon:"mdi mdi-quality-high" },
-						{ id:"Data Quality", value:"High Alert", icon:"mdi mdi-database-check" }
+						{ id:"Active Investiation", value:"Active Investiation", icon:"mdi mdi-lifebuoy" },
+						{ id:"Blocked", value:"Blocked", icon:"mdi mdi-monitor-cellphone-star" },
+						{ id:"Investigation Closed", value:"Investigation Closed", icon:"mdi mdi-quality-high" },
+						{ id:"New Claim", value:"New Claim", icon:"mdi mdi-database-check" }
 					]
 				},
 				{ $subview:TasksView }

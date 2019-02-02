@@ -13,11 +13,16 @@ export default class LossView extends JetView {
 				{
 					view: "datatable",
 					columns: [
-						{ id: "title", header: "Loss Estimate", fillspace: true },
+						{ id: "title", header: "Claim and Loss Estimate", fillspace: true, css:"title_col" },
 						{ id: "year", header: "" },
 					],
 					data: loss,
 				},
+				{
+					view: "textarea",
+					// label: "Notes",
+					value: "Type notes here."
+				}
 			]
 		};
 	}

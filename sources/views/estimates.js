@@ -14,7 +14,7 @@ export default class EstimatesView extends JetView {
 					view: "datatable",
 					columns: [
 						// { id: "title", header: "Fraud", fillspace: true },
-						{ id: "year", header: "" },
+						{ id: "year", header: "", css:"title_col" },
 					],
 					data: estimates,
 				},
