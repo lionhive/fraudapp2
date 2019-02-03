@@ -34,7 +34,8 @@
 }
 /* toolbar buttons */
 .logo{
-	background:url(webix.svg) 12px 4px no-repeat;
+	background:url(webix.svg) 10px 4px no-repeat;
+	background-size: 60%;
 }
 .webix_el_label.main_label{
 	line-height:36px;

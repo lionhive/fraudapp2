@@ -14,7 +14,7 @@ export default class ProgressView extends JetView {
 					border:true,
 					localId:"progress",
 					type:"splineArea",
-					value:"#tasks#",
+					value:"#claims#",
 					color:"#1CA1C1",
 					borderWidth:2,
 					alpha:0.1,
@@ -28,7 +28,7 @@ export default class ProgressView extends JetView {
 						start:0, end:100, step:20, color:"#fff", lineColor:"#EDEFF0"
 					},
 					tooltip:{
-						template:_("Week") + " #week#<br>#tasks# " + _("tasks completed")
+						template:_("Week") + " #week#<br>#claims# " + _("claims completed")
 					},
 					padding:{
 						top:10

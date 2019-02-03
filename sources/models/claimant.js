@@ -43,17 +43,17 @@ export const insured = [
 
 export const claim_schema = [
   { label: "Claim", type: "label" },
-  { id: "date_of_loss", label: "Date of Loss", type: "date" },
-  { id: "claim_age", label: "Claim Age" },
-  { id: "location_loss", label: "Location Loss", type: "text" },
   { id: "loss", label: "Loss" },
+  { id: "date_of_loss", label: "Date of Loss", type: "date" },
+  // { id: "claim_age", label: "Claim Age" },
+  // { id: "location_loss", label: "Location Loss", type: "text" },
   { id: "status", label: "Claim Status", options: ["Active", "Closed", "New"], type: "select" },
 ];
 
 export const claim = [{
   date_of_loss: "2018-12-22",
   claim_age: "2 months",
-  location_loss: "Seattle, WA",
+  location_loss: "Santa Clarita, CA",
   status: "Active",
   loss: "Injury, lower back pain",
 }];
@@ -78,7 +78,7 @@ export const loss = [
 ];
 
 export const demographics = [
-  { title: "Santa Clarita", value: 290 },
+  { title: "Santa Clarita", value: 250 },
   { title: "County Average", value: 140 },
   { title: "Glendale", value: 190 },
   { title: "Lancaster", value: 120 },

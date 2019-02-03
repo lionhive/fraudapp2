@@ -13,7 +13,7 @@ export default class DemographicsView extends JetView {
 				{
 					view: "datatable",
 					columns: [
-						{ id: "title", header: "Location and Nearby Demographics", fillspace: true, css:"title_col" },
+						{ id: "title", header: "Location Fraud Demographics", fillspace: true, css:"title_col" },
 						{ id: "value", header: "", fillspace: true, css:"danger" },
 					],
 					height: 100,
@@ -21,13 +21,22 @@ export default class DemographicsView extends JetView {
 				},
 				{
 					view: "chart",
-					type: "pie",
-					// padding: { right: 150 },
-					// preset: "stick",
+					type: "barH",
+					gradient:function(gradient){
+						gradient.addColorStop(1.0,"#FF0000");
+						gradient.addColorStop(0.2,"#FFFF00");
+						gradient.addColorStop(0.0,"#00FF22");
+					},
+					xAxis:{
+					},
+					yAxis:{
+						template:"",
+					},
+ 					padding: { right: 40 },
+					preset: "column",
 					value: "#value#",
 					label: "#title#",
 					// pieInnerText: "#title#",
-					shadow: 0,
 					data: demographics
 				},
 			]

@@ -1,16 +1,16 @@
 import {JetView} from "webix-jet";
 import {rules} from "models/rules";
-import {getPersons} from "models/persoptions";
-import {getProjects} from "models/projoptions";
 import {getLangsList} from "models/langslist";
 
-export default class RulesView extends JetView {
-	config(){
-		const _ = this.app.getService("locale")._;
-		const persons = getPersons();
-		const projects = getProjects();
-		const date_format = webix.Date.dateToStr("%d %M %y");
+import ExplanationPopup from "views/explanation_popup";
 
+export default class RulesView extends JetView {
+	config() {
+		const _ = this.app.getService("locale")._;
+		const date_format = webix.Date.dateToStr("%d %M %y");
+		// replace a colunn's header: value with this to add a button.
+		//const zoom_button = "<button id='settings' class='webix_button webixtype_base' style=''>?</button>";
+		parent = this;
 		return {
 			view:"datatable",
 			gravity:3,
@@ -32,7 +32,7 @@ export default class RulesView extends JetView {
 				{
 					id:"task", fillspace:3, header:_("Explanation"),
 					sort:"text", editor:"text",
-					tooltip:_("Double-click to edit the task name"),
+					tooltip:_("Double-click to edit the explanation"),
 					template: obj => _(obj.task)
 				},
 				// {
@@ -74,6 +74,9 @@ export default class RulesView extends JetView {
 					const user = this.getItem(row.id).user;
 					this.$scope.app.callEvent("task:select",[user]);
 					this.showItem(row.id);
+
+					// Pop up window with details of rule.
+				  parent.newtask.showWindow(this.getItem(row.id));
 				}
 			},
 			onClick:{
@@ -88,6 +91,7 @@ export default class RulesView extends JetView {
 	}
 	init(view,url){
 		view.sync(rules);
+	  parent.newtask = parent.ui(ExplanationPopup);
 
 		const lang = this.app.getService("locale").getLang();
 		if (lang !== "en"){
@@ -114,7 +118,7 @@ export default class RulesView extends JetView {
 				view.filter("#project#",id);
 
 			if (!view.count())
-				view.showOverlay("Looks like this project of yours needs some love and attention");
+				view.showOverlay("Looks like this project needs some love and attention");
 			else
 				view.hideOverlay();
 		});

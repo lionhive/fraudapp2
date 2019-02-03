@@ -4,6 +4,13 @@ import {getPersons} from "models/persoptions";
 import {getProjects} from "models/projoptions";
 import {getLangsList} from "models/langslist";
 
+function DateDiff(d1, d2) {
+	var t2 = d2.getTime();
+	var t1 = d1.getTime();
+
+	return parseInt((t2-t1)/(24*3600*1000));
+};
+
 export default class TasksView extends JetView {
 	config(){
 		const _ = this.app.getService("locale")._;
@@ -84,6 +91,15 @@ export default class TasksView extends JetView {
 						if (!obj.end)
 							return _("incomplete");
 						else return date_format(obj.end);
+					}
+				},
+				{
+					id:"age", fillspace:1, header:_("Claim Age"),
+					sort:"text",
+					template: obj => {
+						if (obj.end)
+							return _("completed");
+						else return DateDiff(new Date(), obj.start);
 					}
 				}
 			],

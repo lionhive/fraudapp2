@@ -9,6 +9,12 @@ export default class ClaimantView extends JetView {
 			rows: [
 				{
 					view:"property",
+					id:"claim",
+					elements:claim_schema,
+					data: claim,
+				},
+				{
+					view:"property",
 					id:"claimant",
 					elements:claimant_schema,
 					data: claimant,
@@ -18,12 +24,6 @@ export default class ClaimantView extends JetView {
 					id:"insured",
 					elements:insured_schema,
 					data: insured,
-				},
-				{
-					view:"property",
-					id:"claim",
-					elements:claim_schema,
-					data: claim,
 				},
 			]
 		};
