@@ -3,7 +3,7 @@ export function getProjects(){
 }
 
 const projects = [
-	{ id:"Active", value:"Active" },
+	{ id:"Active Investigation", value:"Active Investigation" },
 	{ id:"Complete", value:"Complete" },
 	{ id:"Cannot Prove", value:"Unable to prove" },
 	{ id:"Cannot Reach", value:"Unable to reach" },

@@ -1,5 +1,5 @@
 import { JetView } from "webix-jet";
-import { claimant, insured, insured_schema, claimant_schema } from "../models/claimant";
+import { claimant, claimant_schema, insured, insured_schema, claim, claim_schema } from "../models/claimant";
 
 export default class ClaimantView extends JetView {
 	config() {
@@ -15,9 +15,15 @@ export default class ClaimantView extends JetView {
 			  },
 				{
 					view:"property",
-					id:"claimant",
+					id:"insured",
 					elements:insured_schema,
 					data: insured,
+				},
+				{
+					view:"property",
+					id:"claim",
+					elements:claim_schema,
+					data: claim,
 				},
 			]
 		};

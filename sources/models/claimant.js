@@ -1,28 +1,28 @@
-export const time = [
-  { title: "Investigator Name", year: "Tommie S.", votes: 678790 },
-  { title: "Experience", year: "3.6 years", votes: 678790 },
-  { title: "Case Load", year: "5 active", votes: 678790 },
+
+export const investigator_schema = [
+  { label: "Investigator", type: "label" },
+  { id: "fname", label: "Name" },
+  { id: "experience", label: "Experience" },
+  // { id: "case_load", label: "Case Load" },
+  // { id: "money", label: "Cost" },
+//  { id: "hours", label: "Hours" },
 ];
 
 export const claimant_schema = [
   { label: "Claimant", type: "label" },
   { id: "name", label: "Name" },
+  { id: "age", label: "Age" },
   // { id: "ss", label: "SS#", type: "password" },
-  { id: "date_of_loss", label: "Date of Loss", type: "date" },
-  { id: "claim_age", label: "Claim Age" },
   { id: "job_title", label: "Job Title", type: "text" },
-  { id: "location_loss", label: "Location Loss", type: "text" },
 ];
 
 export const claimant = [
   {
     id: 1,
     name: "Jon Lewin",
+    age: 34,
     ss: "123-456-7890",
-    date_of_loss: "2019-12-22",
-    claim_age: "2 months",
     job_title: "Truck Driver",
-    location_loss: "Seattle, WA",
   },
 ];
 
@@ -41,6 +41,42 @@ export const insured = [
   }
 ];
 
+export const claim_schema = [
+  { label: "Claim", type: "label" },
+  { id: "date_of_loss", label: "Date of Loss", type: "date" },
+  { id: "claim_age", label: "Claim Age" },
+  { id: "location_loss", label: "Location Loss", type: "text" },
+  { id: "loss", label: "Loss" },
+  { id: "status", label: "Claim Status", options: ["Active", "Closed", "New"], type: "select" },
+];
+
+export const claim = [{
+  date_of_loss: "2018-12-22",
+  claim_age: "2 months",
+  location_loss: "Seattle, WA",
+  status: "Active",
+  loss: "Injury, lower back pain",
+}];
+
+export const loss_schema = [
+  { label: "Claim and Loss Estimate", type: "label" },
+  { id: "settlement", label: "Est. Settlement" },
+  { id: "paid", label: "Paid To Date" },
+  { id: "siu_cost", label: "SIU cost to date" },
+  { id: "reserves", label: "Reserves" },
+  { id: "est_cost", label: "Est. Cost" },
+];
+
+export const loss = [
+  {
+    settlement: "$14,500",
+    paid: "$5,500",
+    siu_cost: "$4,000",
+    reserves: "$10,000",
+    est_cost: "34,000",
+  }
+];
+
 export const demographics = [
   { title: "Santa Clarita", value: 290 },
   { title: "County Average", value: 140 },
@@ -55,28 +91,6 @@ export const demographic_loss = [
   { title: "Location fraud history", value: "High" },
 ];
 
-export const loss_schema = [
-  { label: "Claim and Loss Estimate", type: "label" },
-  { id: "loss", label: "Loss" },
-  { id: "settlement", label: "Est. Settlement" },
-  { id: "paid", label: "Paid To Date" },
-  { id: "siu_cost", label: "SIU cost to date" },
-  { id: "reserves", label: "Reserves" },
-  { id: "est_cost", label: "Est. Cost" },
-  { id: "status", label: "Claim Status", options: ["Active", "Closed", "New"], type:"select" },
-];
-
-export const loss = [
-  {
-    loss: "Injury, lower back pain",
-    settlement: "$14,500",
-    paid: "$5,500",
-    siu_cost: "$4,000",
-    reserves: "$10,000",
-    est_cost: "34,000",
-    status: "Active",
-  }
-];
 
 export const fraud = [
   { title: "Claim Fraud", year: "Extreme", value: [9.8], history: [0, 80, 15, 50, 210, 250] },

@@ -1,5 +1,5 @@
 import { JetView } from "webix-jet";
-import { time } from "../models/claimant";
+import { investigator_schema } from "../models/claimant";
 
 export default class TimeView extends JetView {
 	config() {
@@ -12,14 +12,18 @@ export default class TimeView extends JetView {
 			rows: [
 				// { template:_("Claimant"), type:"header", css:"webix_header chart_header" },
 				{
-					view: "datatable",
+					view:"property",
+					id:"investigator",
+					elements:investigator_schema,
+			  },
+				{
+					view:"datatable",
+					id:"hours",
 					columns: [
-						{ id: "title", header: "Investigator", fillspace: true },
-						{ id: "year", header: "" },
+						{ id: "activity", header: "Case Type" },
+						{ id: "hours", header: "Case Load" },
 					],
-					data: time,
 				},
-
 				{
 					localId: "hours",
 					view: "chart",
@@ -51,6 +55,8 @@ export default class TimeView extends JetView {
 	init(view) {
 		this.on(this.app, "person:select", person => {
 			view.queryView({ view: "chart" }).parse(webix.copy(person.hours));
+			view.queryView({ view: "property" }).parse(webix.copy(person));
+			view.queryView({ view: "datatable" }).parse(webix.copy(person.hours));
 		});
 	}
 }
