@@ -1,71 +1,98 @@
-export const time =
-  [
-    { title: "Investigator Name", year: "Tommie S.", votes: 678790 },
-    { title: "Experience", year: "3.6 years", votes: 678790 },
-    { title: "Case Load", year: "5 active", votes: 678790 },
-
-  ];
-
-export const claimant =
-  [
-    { id: 1, title: "Claimant Name", year: "Jon Lewin", votes: 678790 },
-    { id: 2, title: "Claim ID", year: 375832, votes: 511495 },
-    { title: "Date of Loss", year: "12/22/2018"},
-    { title: "Claim Age", year: "2 months"},
-    { title: "Job Title", year: "Truck Driver"},
-    { title: "Location of Loss", year: "Seattle, WA"},
-  ];
-
-  export const insured =
-  [
-    { title: "Insured", year: "USA Trucks" },
-    { title: "Employeees", year: "14" },
-    { title: "Policy Age (months)", year: "5 " },
-  ];
-
-  export const demographics =
-  [
-    { title: "Santa Clarita", value: 290 },
-    { title: "County Average", value: 140 },
-    { title: "Glendale", value: 190 },
-    { title: "Lancaster", value: 120 },
-    { title: "National Average", value: 98 },
-    { title: "State Average", value: 100 },
-  ];
-
-  export const demographic_loss =
-  [
-    { title: "Location of loss", value: "Santa Clarita" },
-    { title: "Location fraud history", value: "High" },
-  ];
-export const loss =
-[
-  { title: "Loss", year: "Injury, lower back" },
-  { title: "Est. Settlement", year: "$14,500" },
-  { title: "Paid To Date", year: "$5,500" },
-  { title: "SIU cost to date", year: "$4,000" },
-  { title: "Reserves", year: "$10,000" },
-  { title: "Est. Cost", year: "34,000" },
+export const time = [
+  { title: "Investigator Name", year: "Tommie S.", votes: 678790 },
+  { title: "Experience", year: "3.6 years", votes: 678790 },
+  { title: "Case Load", year: "5 active", votes: 678790 },
 ];
 
-export const fraud =
-[
-  { title: "Claim Fraud", year: "Extreme", value: [9.8], history:[0,80,15,50,210,250] },
-  { title: "Provider Fraud", year: "High", value: [8.7], history:[250,240,300,230,270,280]},
-  { title: "Collusion Fraud", year: "Detected", value: 5.0, history: [250,240,300,230,270,280] },
-  { title: "Related Claims", year: "37", value: 2.0, history: [150,200,170,210,250,190]},
-  { title: "Suspicious Graph", year: "Flagged", value: 9.0, history: [280,230,280,290,260,210] },
+export const claimant_schema = [
+  { label: "Claimant", type: "label" },
+  { id: "name", label: "Name" },
+  // { id: "ss", label: "SS#", type: "password" },
+  { id: "date_of_loss", label: "Date of Loss", type: "date" },
+  { id: "claim_age", label: "Claim Age" },
+  { id: "job_title", label: "Job Title", type: "text" },
+  { id: "location_loss", label: "Location Loss", type: "text" },
 ];
 
-export const fraud_settle =
-[
-  { title: "Attorney Involvement", year: "Low", value: [1.2], history:[0,80,15,50,210,250] },
-  { title: "Early Settlement", year: "High", value: [6.2], history:[0,80,15,50,210,250] },
-  { title: "Adjucation  Success", year: "High", value: [3.2], history:[0,80,15,50,210,250] },
+export const claimant = [
+  {
+    id: 1,
+    name: "Jon Lewin",
+    ss: "123-456-7890",
+    date_of_loss: "2019-12-22",
+    claim_age: "2 months",
+    job_title: "Truck Driver",
+    location_loss: "Seattle, WA",
+  },
 ];
 
-export const explanations =
-[
+export const insured_schema = [
+  { label: "Insured", type: "label" },
+  { id: "insured", label: "Insured" },
+  { id: "employees", label: "Employeees" },
+  { id: "policy_age", label: "Policy Age (months)" },
+];
+
+export const insured = [
+  {
+    insured: "USA Trucks",
+    employees: 14,
+    policy_age: 5,
+  }
+];
+
+export const demographics = [
+  { title: "Santa Clarita", value: 290 },
+  { title: "County Average", value: 140 },
+  { title: "Glendale", value: 190 },
+  { title: "Lancaster", value: 120 },
+  { title: "National Average", value: 98 },
+  { title: "State Average", value: 100 },
+];
+
+export const demographic_loss = [
+  { title: "Location of loss", value: "Santa Clarita" },
+  { title: "Location fraud history", value: "High" },
+];
+
+export const loss_schema = [
+  { label: "Claim and Loss Estimate", type: "label" },
+  { id: "loss", label: "Loss" },
+  { id: "settlement", label: "Est. Settlement" },
+  { id: "paid", label: "Paid To Date" },
+  { id: "siu_cost", label: "SIU cost to date" },
+  { id: "reserves", label: "Reserves" },
+  { id: "est_cost", label: "Est. Cost" },
+  { id: "status", label: "Claim Status", options: ["Active", "Closed", "New"], type:"select" },
+];
+
+export const loss = [
+  {
+    loss: "Injury, lower back pain",
+    settlement: "$14,500",
+    paid: "$5,500",
+    siu_cost: "$4,000",
+    reserves: "$10,000",
+    est_cost: "34,000",
+    status: "Active",
+  }
+];
+
+export const fraud = [
+  { title: "Claim Fraud", year: "Extreme", value: [9.8], history: [0, 80, 15, 50, 210, 250] },
+  { title: "Provider Fraud", year: "High", value: [8.7], history: [250, 240, 300, 230, 270, 280] },
+  { title: "Collusion Fraud", year: "Detected", value: 5.0, history: [250, 240, 300, 230, 270, 280] },
+  { title: "Related Claims", year: "37", value: 2.0, history: [150, 200, 170, 210, 250, 190] },
+  { title: "Suspicious Graph", year: "Flagged", value: 9.0, history: [280, 230, 280, 290, 260, 210] },
+];
+
+export const fraud_settle = [
+  { title: "Attorney Involvement", year: "Low", value: [1.2], history: [0, 80, 15, 50, 210, 250] },
+  { title: "Early Settlement", year: "High", value: [6.2], history: [0, 80, 15, 50, 210, 250] },
+  { title: "Adjucation  Success", year: "High", value: [3.2], history: [0, 80, 15, 50, 210, 250] },
+];
+
+export const explanations = [
   { title: "1550% above norm RX costs", year: "" },
   { title: "Impossible commute distance ", year: "" },
   { title: "87% similar to 7 fraud cases", year: "" },
@@ -73,8 +100,7 @@ export const explanations =
   { title: "Doctor found in fraud network", year: "" },
 ];
 
-export const estimates =
-[
+export const estimates = [
   { title: "Investigation Cost", year: "$11,500" },
   { title: "Investigation Length", year: "2 months" },
   { title: "Restitution Likelihood", year: "100%" },

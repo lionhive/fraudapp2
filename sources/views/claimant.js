@@ -1,29 +1,22 @@
 import { JetView } from "webix-jet";
-import { claimant, insured } from "../models/claimant";
+import { claimant, insured, insured_schema, claimant_schema } from "../models/claimant";
 
 export default class ClaimantView extends JetView {
 	config() {
 		const _ = this.app.getService("locale")._;
 		return {
 			type: "clean",
-			width: 410,
-			height: 300,
 			rows: [
-				// { template:_("Claimant"), type:"header", css:"webix_header chart_header" },
 				{
-					view: "datatable",
-					columns: [
-						{ id: "title", header: "Claimant", fillspace: true, css:"title_col" },
-						{ id: "year", header: "" },
-					],
+					view:"property",
+					id:"claimant",
+					elements:claimant_schema,
 					data: claimant,
-				},
+			  },
 				{
-					view: "datatable",
-					columns: [
-						{ id: "title", header: "Insured", fillspace: true, css:"title_col" },
-						{ id: "year", header: "" },
-					],
+					view:"property",
+					id:"claimant",
+					elements:insured_schema,
 					data: insured,
 				},
 			]

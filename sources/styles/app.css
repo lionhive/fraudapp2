@@ -1,3 +1,7 @@
+.webix_property_label {
+	font-weight:500;
+	color:#313131;
+}
 /* list of persons */
 .userphoto{
 	display:inline-block;

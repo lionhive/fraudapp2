@@ -1,23 +1,19 @@
 import { JetView } from "webix-jet";
-import { loss } from "../models/claimant";
+import { loss, loss_schema	 } from "../models/claimant";
 
 export default class LossView extends JetView {
 	config() {
 		const _ = this.app.getService("locale")._;
 		return {
 			type: "clean",
-			width: 410,
-			height: 300,
 			rows: [
 				// { template:_("Fraud"), type:"header", css:"webix_header chart_header" },
 				{
-					view: "datatable",
-					columns: [
-						{ id: "title", header: "Claim and Loss Estimate", fillspace: true, css:"title_col" },
-						{ id: "year", header: "" },
-					],
+					view:"property",
+					id:"loss",
+					elements:loss_schema,
 					data: loss,
-				},
+			  },
 				{
 					view: "textarea",
 					// label: "Notes",
