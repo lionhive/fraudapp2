@@ -87,8 +87,8 @@ export const demographics = [
 ];
 
 export const demographic_loss = [
-  { title: "Location of loss", value: "Santa Clarita" },
-  { title: "Location fraud history", value: "High" },
+  { title: "Location of Loss", value: "Santa Clarita" },
+  { title: "Location Fraud History", value: "High" },
 ];
 
 

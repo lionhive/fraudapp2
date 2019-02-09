@@ -3,9 +3,20 @@ import { getPersons } from "models/persoptions";
 import { getProjects } from "models/projoptions";
 
 export const explanations = [
-	{ title: "Letter from attorney 1/5/2019" },
+	{ title: "Police Report 1/5/2019" },
 	{ title: "Average prescription oost analysis" },
+	{
+		title: "At 0815 hours on 4 January 2010, I, Officer John Brown #547, was dispatched to a workplace accident at 301 Crown Place, Smithville."
+			+ "  I arrived at construction zone at 1320 hours. A construciont worker was standing on the front lawn."
+			+ ""
+	}
 ];
+const police_report = "At 1315 hours on 4 January 2019, I, Officer John Brown #547, was dispatched to a workplace accident at 301 Crown Place, Smithville. " +
+	"Brown arrived at construction zone at 1320 hours. A construction worker was <div class='red_text red_text_light'>standing on the front lawn</div> bleeding from the head. " +
+	"The construction worker identified himself as Jim and appeared calm and explained there were <div class='red_text'>no witnesses</div> who saw the accident. " +
+	"Jim explained that a 48\" aluminum level fell from a scaffolding and hit him in the head, cutting him badly." +
+	"The incident happened approximately 1200 hours, <div class='red_text red_text_light'>1 hour before 911</div> was called." +
+	"";
 
 export default class ExplanationPopup extends JetView {
 	config() {
@@ -17,8 +28,8 @@ export default class ExplanationPopup extends JetView {
 			view: "window",
 			position: "center",
 			modal: true,
-			select:"cell",
-			head: _("Explanation Evidence"),
+			select: "cell",
+			head: _("Police Report 04/2019"),
 			// width: "60%",
 			// height: "1800px",
 			body: {
@@ -38,6 +49,14 @@ export default class ExplanationPopup extends JetView {
 							},
 						],
 						data: explanations,
+					},
+					{
+						view: "richtext",
+						label: "Police Report",
+						labelAlign: "left",
+						height: 150,
+						value: police_report,
+						readonly: true,
 					},
 					{
 						cols: [

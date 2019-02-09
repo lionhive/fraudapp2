@@ -101,7 +101,7 @@ export default class ToolbarView extends JetView{
 								},
 								{
 									view:"icon", icon:"mdi mdi-bookmark-check",
-									tooltip:_("Open the list of all tasks"),
+									tooltip:_("Open list of all claims"),
 									localId:"favs", batch:"default",
 									click:function(){
 										if (this.config.icon.indexOf("check") !== -1)
@@ -168,7 +168,7 @@ export default class ToolbarView extends JetView{
 		}
 		else if (url[1].page === "dashboard"){
 			nav_btn.config.icon = "mdi mdi-bookmark-check";
-			nav_btn.config.tooltip = _("Open the list of all tasks");
+			nav_btn.config.tooltip = _("Open the list of all claims");
 		}
 		nav_btn.refresh();
 	}

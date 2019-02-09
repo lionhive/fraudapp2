@@ -4,7 +4,7 @@
 	{"id":3,"status":0,"task":"87% similar to 7 proven fraud cases","weight":0.6,"project":"SIU","user":5,"start":"2018-09-12","end":null},
 	{"id":4,"status":1,"task":"Too many claims by employer in 6 months","weight":0.55,"project":"Litigation","user":6,"start":"2018-09-29","end":"2018-09-31"},
 	{"id":5,"status":1,"task":"Provider detected in known fraud network","weight":0.45,"project":"Litigation","user":7,"start":"2018-09-18","end":"2018-09-20"},
-	{"id":6,"status":1,"task":"Attorney 1 hop from known fraud network","weight":0.25,"project":"Litigation","user":8,"start":"2018-09-23","end":"2018-09-25"},
+	{"id":6,"status":1,"task":"No witnesses in police report","weight":0.25,"project":"Litigation","user":8,"start":"2018-09-23","end":"2018-09-25"},
 	{"id":7,"status":1,"task":"Late report (5 days)","weight":0.88,"project":"Litigation","user":9,"start":"2018-09-03","end":"2018-09-05"},
 	{"id":8,"status":1,"task":"Multiple mismatched addresses provided","weight":0.123,"project":"SIU","user":10,"start":"2018-09-02","end":"2018-09-04"},
 	{"id":9,"status":1,"task":"Address has changed twice since loss","project":"Litigation","weight":0.123,"user":11,"start":"2018-09-12","end":"2018-09-14"},

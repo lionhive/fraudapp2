@@ -3,7 +3,6 @@ export function getNotifications(){
 }
 
 const notifications = [
-	{ title:"Latest tasks in your projects", message:"Top margin in a popup window is smaller than the..." },
-	{ title:"Autocat report", message:"Navigations problem in the left menu" },
-	{ title:"Assignment", message:"Gita Noda assigned you a new ticket" }
+	{ title:"New claims with detected fraud", message:"8 new claims available with 80% or higher fraud predicted." },
+	{ title:"Updated claims with detected fraud", message:"18 claims with fraud predicted that had previously no fraud detected." },
 ];
