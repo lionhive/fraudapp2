@@ -13,6 +13,7 @@ export default class LossView extends JetView {
 					id:"loss",
 					elements:loss_schema,
 					data: loss,
+					height: 160,
 			  },
 				{
 					view: "textarea",

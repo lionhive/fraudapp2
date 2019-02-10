@@ -12,12 +12,14 @@ export default class ClaimantView extends JetView {
 					id:"claim",
 					elements:claim_schema,
 					data: claim,
+					height:120,
 				},
 				{
 					view:"property",
 					id:"claimant",
 					elements:claimant_schema,
 					data: claimant,
+					height:75,
 			  },
 				{
 					view:"property",

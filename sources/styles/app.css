@@ -139,18 +139,19 @@
 	/* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
 
 .red_text {
-	font-size:16px;
+	font-size:larger;
 	font-style:bold;
 	color:#ff0000;
 	background-color:#ff000010;
 	display:inline;
+	/* text-decoration: underline; */
 }
 
 .red_text_light {
-	font-size:14px;
+	font-size:unset;
 	font-style:normal;
-	color:darkred;
-	background-color:white;
+	color:#ff8080;
+	background:unset;
 	display:inline;
 }
 
@@ -159,4 +160,26 @@
 	color:#00a000;
 	background-color:#00ff0010;
 	display:inline;
+}
+
+.explanations {
+	background:#1ca1c1;
+	background-color:#1ca1c1;
+	font-size: larger;
+}
+
+.webix_richtext_container {
+	background: #f5f5f5;
+	font-family:monospace
+}
+
+.webix_richtext_editor {
+	background: #f5f5f5;
+	font-family:monospace;
+}
+
+/* view_id="$toolbar2" */
+[view_id~="$toolbar2"] {
+ visibility: hidden;
+ background:#f5f5f5;
 }

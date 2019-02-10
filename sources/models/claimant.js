@@ -5,13 +5,13 @@ export const investigator_schema = [
   { id: "experience", label: "Experience" },
   // { id: "case_load", label: "Case Load" },
   // { id: "money", label: "Cost" },
-//  { id: "hours", label: "Hours" },
+  //  { id: "hours", label: "Hours" },
 ];
 
 export const claimant_schema = [
   { label: "Claimant", type: "label" },
   { id: "name", label: "Name" },
-  { id: "age", label: "Age" },
+  // { id: "age", label: "Age" },
   // { id: "ss", label: "SS#", type: "password" },
   { id: "job_title", label: "Job Title", type: "text" },
 ];
@@ -19,10 +19,10 @@ export const claimant_schema = [
 export const claimant = [
   {
     id: 1,
-    name: "Jon Lewin",
+    name: "William Greene",
     age: 34,
     ss: "123-456-7890",
-    job_title: "Truck Driver",
+    job_title: "Construction Worker",
   },
 ];
 
@@ -35,7 +35,7 @@ export const insured_schema = [
 
 export const insured = [
   {
-    insured: "USA Trucks",
+    insured: "Bear Trucking",
     employees: 14,
     policy_age: 5,
   }
@@ -48,6 +48,7 @@ export const claim_schema = [
   // { id: "claim_age", label: "Claim Age" },
   // { id: "location_loss", label: "Location Loss", type: "text" },
   { id: "status", label: "Claim Status", options: ["Active", "Closed", "New"], type: "select" },
+  { id: "documents", label: "Documents" },
 ];
 
 export const claim = [{
@@ -55,7 +56,8 @@ export const claim = [{
   claim_age: "2 months",
   location_loss: "Santa Clarita, CA",
   status: "Active",
-  loss: "Injury, lower back pain",
+  loss: "Personal Injury / Severe cut on head",
+  documents: 157,
 }];
 
 export const loss_schema = [
@@ -97,7 +99,7 @@ export const fraud = [
   { title: "Provider Fraud", year: "High", value: [8.7], history: [250, 240, 300, 230, 270, 280] },
   { title: "Collusion Fraud", year: "Detected", value: 5.0, history: [250, 240, 300, 230, 270, 280] },
   { title: "Related Claims", year: "37", value: 2.0, history: [150, 200, 170, 210, 250, 190] },
-  { title: "Suspicious Graph", year: "Flagged", value: 9.0, history: [280, 230, 280, 290, 260, 210] },
+  // { title: "Suspicious Graph", year: "Flagged", value: 9.0, history: [280, 230, 280, 290, 260, 210] },
 ];
 
 export const fraud_settle = [
@@ -120,4 +122,17 @@ export const estimates = [
   { title: "Restitution Likelihood", year: "100%" },
   { title: "Restitution Amount", year: "$31,000" },
   { title: "", year: "" },
+];
+
+export const report = [{
+  type: "Police Report",
+  date: "2018-12-22",
+  confidentiality: "External",
+}];
+
+export const report_schema = [
+  // { label: "Document Type", type: "label" },
+  { id: "type", label: "Document Type" },
+  { id: "date", label: "Incident Date", type: "date" },
+  { id: "confidentiality", label: "Confidentiality", options: ["Internal", "External"], type: "select"  },
 ];

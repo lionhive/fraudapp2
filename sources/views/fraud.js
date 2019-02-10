@@ -13,6 +13,7 @@ export default class FraudView extends JetView {
 				{
 					view: "datatable",
 					subrow:"Risk: #value#",
+					height:170,
 					columns: [
 						{ id: "title", header: "Fraud Analytics", fillspace: true, css:"title_col",
 						   template:"{common.subrow()} #title#"},
@@ -47,7 +48,7 @@ export default class FraudView extends JetView {
 								html += "<div title='" + (parseInt(obj.value * 10, 10) + "%") + "' class='progress_result ' style='width:" + (obj.value * 10 + "%") + "'></div>";
 								html += "</div>";
 								return html;
-							}
+							},
 						},
 					],
 					data: fraud_settle,

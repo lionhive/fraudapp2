@@ -76,6 +76,11 @@ export default class TasksView extends JetView {
 				// 	header:_("Start")
 				// },
 				{
+					id: "docs",
+					header: "Docs",
+					width: 40
+				},
+				{
 					id: "history",
 					header: "History",
 					template: "{common.sparklines()}",

@@ -2,6 +2,7 @@ import {JetView} from "webix-jet";
 import NotificationPopup from "views/notifications";
 import SettingsPopup from "views/settings";
 import NewTaskPopup from "views/newtask";
+import ExportPopup from "views/export_popup";
 
 export default class ToolbarView extends JetView{
 	config(){
@@ -53,6 +54,15 @@ export default class ToolbarView extends JetView{
 									// inputHeight:40,
 									batch:"default",
 									click:() => this.newtask.showWindow()
+								},
+								{
+									view:"button",
+									type:"form",
+									label:_("Export"),
+									autowidth:true,
+									// inputHeight:40,
+									batch:"default",
+									click:() => this.exportpopup.showWindow()
 								},
 								{ batch:"default" },
 								{
@@ -145,6 +155,7 @@ export default class ToolbarView extends JetView{
 		this.notifications = this.ui(NotificationPopup);
 		this.settings = this.ui(SettingsPopup);
 		this.newtask = this.ui(NewTaskPopup);
+		this.exportpopup = this.ui(ExportPopup);
 
 		this.on(this.app,"read:notifications",() => {
 			this.$$("bell").config.badge = 0;

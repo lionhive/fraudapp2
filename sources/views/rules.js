@@ -30,7 +30,7 @@ export default class RulesView extends JetView {
 					}
 				},
 				{
-					id:"task", fillspace:3, header:_("Explanation"),
+					id:"task", fillspace:3, header:_("Fraud Explanations"),
 					sort:"text", editor:"text",
 					tooltip:_("Double-click to edit the explanation"),
 					template: obj => _(obj.task)
@@ -42,7 +42,7 @@ export default class RulesView extends JetView {
 				// 	template: obj => _(obj.weight)
 				// },
 				{
-					id: "weight", header: "Impact", sort: "int", // fillspace: 2.5,
+					id: "weight", header: "Risk", sort: "int", // fillspace: 2.5,
 					template: function (obj) {
 						var html = "<div class='progress_bar_element'>";
 						html += "<div title='" + (parseInt(obj.weight * 100, 10) + "%") + "' class='progress_result ' style='width:" + (obj.weight * 100 + "%") + "'></div>";
@@ -54,7 +54,7 @@ export default class RulesView extends JetView {
 					id:"start", fillspace:1,
 					format:date_format,
 					sort:"date", tooltip:_("The task was created"),
-					header:_("Start")
+					header:_("Date Detected")
 				},
 				{
 					id:"end", fillspace:1, header:_("Completed"),
