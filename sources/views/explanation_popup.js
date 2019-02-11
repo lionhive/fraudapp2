@@ -90,11 +90,11 @@ export default class ExplanationPopup extends JetView {
 							{
 								cols: [
 									{
-										view: "button", value: _("Cancel"),
+										view: "button", value: _("Close"),
 										click: () => this.getBack()
 									},
 									{
-										view: "button", value: _("Save"), type: "form",
+										view: "button", value: _("Export"), type: "form",
 										click: () => this.saveTask()
 									}
 								]

@@ -17,7 +17,9 @@ import CompareView from "views/compare";
 export default class DashboardView extends JetView{
 	config(){
 		return {
-			type:"space", paddingX:0,
+			type:"space",
+			paddingX:0,
+			id:"dashsiu",
 			cols:[
 				PersonsView,
 				{

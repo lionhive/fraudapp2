@@ -32,8 +32,8 @@ function generateTimeSeries(points, min, max) {
 	let previous_fraud = 0;
 	for (var i = 0; i <= points; i++) {
 
-		const claims = Math.round(random() * (max - min) + min);
-		// const seasonal = Math.cos(i/365) + 1;
+		let seasonal = 1 + Math.cos(i*3.14/90 + Math.sin(i/50)) / 4;
+		const claims = seasonal * Math.round(random() * (max - min) + min);
 		const fraud = Math.round((claims * 0.2 * random() * 2.0 + 1.5));
 
 		if (previous_fraud == 0) {
@@ -94,7 +94,7 @@ var chart = {
 	view: "chart", id: "dchart",
 	type: "splineArea",
 	// value: "#claims#",
-	height: 250,
+	height: 350,
 	color: "#0000ff",
 	// padding: 10,
 	borderWidth: 2,
