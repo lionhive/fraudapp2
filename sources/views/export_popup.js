@@ -34,7 +34,7 @@ export default class ExportPopup extends JetView {
 						],
 					},
 					{
-						view: "radio", label: "Fraud Explanations", value: 1, options: [
+						view: "radio", label: "Explanations", value: 1, options: [
 							{ id: 1, value: "All Explanations" },
 							{ id: 2, value: "High Risk Only" },
 							{ id: 3, value: "Selected Only" },
